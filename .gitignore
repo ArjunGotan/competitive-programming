@@ -1,5 +1,6 @@
 input.txt
 output.txt
+main
 .DS_Store
 *.o
 main.vscode/

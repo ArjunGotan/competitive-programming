@@ -8,7 +8,6 @@
 
 using namespace std;
 
-// Speed optimization macros
 #define pb push_back
 #define mp make_pair
 #define all(x) (x).begin(), (x).end()
@@ -17,7 +16,6 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 
 void solve() {
-    // Write your main problem logic here
     
 }
 
