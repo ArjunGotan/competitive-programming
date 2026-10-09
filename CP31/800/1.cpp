@@ -16,7 +16,25 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 
 void solve() {
-   
+    int n, k, curr;
+    cin >> n >> k;
+
+    int prev;
+    int sorted = 1;
+
+    cin >> prev;
+    for (int i = 0; i < n-1; i++) {
+        cin >> curr;
+        if (curr < prev) {
+            sorted = 0;
+        }
+        prev = curr;
+    }
+    if (k > 1 || sorted) {
+        cout << "YES\n";
+    } else {
+        cout << "NO\n";
+    }
 }
 
 int main() {
