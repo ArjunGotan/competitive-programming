@@ -16,7 +16,27 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 
 void solve() {
-    
+    map<int, int> freq;
+    int n, x;
+
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> x;
+        freq[x]++;
+    }
+    if (freq.size() == 1) {
+        cout << "Yes\n";
+        return;
+    } else if (freq.size() == 2) {
+        auto it1 = freq.begin();
+        auto it2 = next(it1);
+        
+        if (abs((it1->second) - (it2->second)) <= 1) {
+            cout << "Yes\n";
+            return;
+        }
+    }
+    cout << "No\n";
 }
 
 int main() {

@@ -16,7 +16,10 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 
 void solve() {
-    
+    int n;
+    cin >> n;
+
+    (n%3!=0) ? cout << "First\n" : cout << "Second\n";
 }
 
 int main() {

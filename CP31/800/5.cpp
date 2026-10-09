@@ -16,7 +16,12 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 
 void solve() {
-    
+    int n, x;
+    cin >> n >> x;
+    (x == 1) ? cout << "Yes\n" : cout << "No\n";
+    for (int i = 1; i < n; i++) {
+        cin >> x;
+    }
 }
 
 int main() {

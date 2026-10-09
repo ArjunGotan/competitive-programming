@@ -16,7 +16,22 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 
 void solve() {
-    
+    string s, sub;
+    int n;
+    cin >> n;
+    cin >> s;
+    int found = 0;
+    for (int i = 0; i <= n-3; i++) {
+        sub = s.substr(i, 3);
+        if (sub == "...") {
+            cout << 2 << '\n';
+            return;
+        }
+    }
+    int c;
+    c = count(s.begin(), s.end(), '.');
+    cout << c << '\n';
+
 }
 
 int main() {
