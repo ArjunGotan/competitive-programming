@@ -5,6 +5,7 @@
 #include <set>
 #include <map>
 #include <cmath>
+#include <array>
 
 using namespace std;
 
@@ -15,9 +16,11 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 
+
 void solve() {
     
 }
+
 
 int main() {
     ios_base::sync_with_stdio(false);
@@ -28,8 +31,8 @@ int main() {
     freopen("output.txt", "w", stdout);
     #endif
 
-    int t;
-    cin >> t;
+    int t = 1;
+    // cin >> t;
     while (t--) {
         solve();
     }
