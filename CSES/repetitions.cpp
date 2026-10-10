@@ -16,9 +16,29 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 
+
 void solve() {
-    
+    // find max length of substring containing only one type of character
+    string seq;
+    int length, maxlength = 0;
+    cin >> seq;
+    char x = '0';
+
+    for (int i = 0; i < seq.length(); i++) {
+        if (seq[i] != x) {
+            length = 0;
+        }
+        x = seq[i];
+        length++;
+        if (length > maxlength) {
+            maxlength = length;
+        }
+    }
+
+    cout << maxlength;
+
 }
+
 
 int main() {
     ios_base::sync_with_stdio(false);
@@ -30,6 +50,7 @@ int main() {
     #endif
 
     int t = 1;
+    // cin >> t;
     while (t--) {
         solve();
     }

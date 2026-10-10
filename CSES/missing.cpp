@@ -16,9 +16,19 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 
+
 void solve() {
-    
+    int n, x, s = 0;
+    cin >> n;
+
+    for (int i = 0; i < n-1; i++) {
+        cin >> x;
+        s += x;
+    }
+
+    cout << (n * (n + 1) / 2) - s;
 }
+
 
 int main() {
     ios_base::sync_with_stdio(false);
@@ -30,6 +40,7 @@ int main() {
     #endif
 
     int t = 1;
+    // cin >> t;
     while (t--) {
         solve();
     }

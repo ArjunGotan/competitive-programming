@@ -18,7 +18,25 @@
 
 
     void solve() {
-        
+        int n, moves = 0, x;
+        cin >> n;
+
+        vi nums;
+
+        for (int i = 0; i < n; i++) {
+            cin >> x;
+            nums.pb(x);
+        }
+
+        for (int i = 0; i < nums.size() - 1; i++) {
+            if (nums[i] > nums[i+1]) {
+                moves += nums[i] - nums[i+1];
+                nums[i+1] = nums[i];   
+            }
+        }
+
+        cout << moves;
+
     }
 
 
