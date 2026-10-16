@@ -19,68 +19,18 @@ typedef pair<int, int> pii;
 
 
 void solve() {
-    int n;
-    ll count, unsafe;
-    cin >> n;
-    for (int k = 1; k <= n; k++) {
-        
+    ll n, k;
+    cin >> n >> k;
 
-        if (k <= 1) {
-            cout << 0 << '\n';
-            continue;
+    if (n % 2 == 0) {
+        cout << "YES\n";
+    } else {
+        if (k % 2 == 1 && k <= n) {
+            cout << "YES\n";
+        } else {
+            cout << "NO\n";
         }
-
-        count = 0;
-
-        for (int i = 0; i < k; i++) {
-            for (int j = 0; j < k; j++) {
-                unsafe = 0;
-
-                // j = x and i = y
-
-                if ((k - 1) - i >= 2) { // for long vertical | bottom half
-                    if (j > 0) {
-                        unsafe++;
-                    }    
-                    if (k - 1 - j > 0) {
-                        unsafe++;
-                    }
-                }
-
-                if (i > 1) { // long vertical top half
-                    if (j > 0) {
-                        unsafe++;
-                    }    
-                    if (k - 1 - j > 0) {
-                        unsafe++;
-                    }
-                }
-
-                // now long horizontal 
-                if (i > 0) {
-                    if (j >= 2) {
-                        unsafe++;
-                    }
-                    if (k - 1 - j >= 2) {
-                        unsafe++;
-                    } 
-                }
-                if (k - 1 - i > 0) {
-                    if (j >= 2) {
-                        unsafe++;
-                    }
-                    if (k - 1 - j >= 2) {
-                        unsafe++;
-                    } 
-                }
-
-                count += (k * k - 1 - unsafe);
-            }
-        }
-        cout << count/2 << '\n';
     }
-    
-    
 
 }
 
@@ -94,11 +44,12 @@ int main() {
     freopen("output.txt", "w", stdout);
     #endif
 
-    int t = 1;
-    // cin >> t;
+    int t;
+    cin >> t;
     while (t--) {
         solve();
     }
 
     return 0;
 }
+    
