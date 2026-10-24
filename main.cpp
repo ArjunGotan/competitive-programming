@@ -18,27 +18,23 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 
-int gcd(int a, int b) {
-    while (b) {
-        a %= b;
-        swap(a, b);
-    }
-    return a;
-}
 
 void solve() {
-    int n, x;
+    int n;
     cin >> n;
-    
-    int ans = 0; 
-    
+    vi nums(n);
     for (int i = 0; i < n; i++) {
-        cin >> x;
-        int d = abs(i + 1 - x);
-        
-        ans = gcd(ans, d); 
+        cin >> nums[i];
     }
-    
+
+    int ans = nums[n - 1] - nums[0];
+
+    for (int i = 0; i < n; i++) {
+        ans = max(ans, nums[i] - nums[0]);
+        ans = max(ans, nums[n - 1] - nums[i]);
+        ans = max(ans, nums[i] - nums[(i + 1) % n]);
+    }
+
     cout << ans << '\n';
 }
 
