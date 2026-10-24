@@ -7,6 +7,7 @@
 #include <cmath>
 #include <array>
 #include <unordered_map>
+#include <algorithm>
 
 using namespace std;
 
@@ -17,21 +18,28 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 
+int gcd(int a, int b) {
+    while (b) {
+        a %= b;
+        swap(a, b);
+    }
+    return a;
+}
 
 void solve() {
-    ll n, k;
-    cin >> n >> k;
-
-    if (n % 2 == 0) {
-        cout << "YES\n";
-    } else {
-        if (k % 2 == 1 && k <= n) {
-            cout << "YES\n";
-        } else {
-            cout << "NO\n";
-        }
+    int n, x;
+    cin >> n;
+    
+    int ans = 0; 
+    
+    for (int i = 0; i < n; i++) {
+        cin >> x;
+        int d = abs(i + 1 - x);
+        
+        ans = gcd(ans, d); 
     }
-
+    
+    cout << ans << '\n';
 }
 
 
