@@ -19,24 +19,7 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 
 
-void solve() {
-    int n;
-    cin >> n;
-    vi nums(n);
-    for (int i = 0; i < n; i++) {
-        cin >> nums[i];
-    }
 
-    int ans = nums[n - 1] - nums[0];
-
-    for (int i = 0; i < n; i++) {
-        ans = max(ans, nums[i] - nums[0]);
-        ans = max(ans, nums[n - 1] - nums[i]);
-        ans = max(ans, nums[i] - nums[(i + 1) % n]);
-    }
-
-    cout << ans << '\n';
-}
 
 
 int main() {
