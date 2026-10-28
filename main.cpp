@@ -8,6 +8,7 @@
 #include <array>
 #include <unordered_map>
 #include <algorithm>
+#include <limits>
 
 using namespace std;
 
@@ -19,8 +20,26 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 
 
+void solve() {
+    string word, target;
+    map<char, int> freq_target;
+    cin >> word >> target;
+    string result = "";
 
+    for (int i = 0; i < target.size(); i++) {
+        freq_target[target[i]]++;
+    }
 
+    for (int i = word.size() - 1; i >= 0; i--) {
+        if (freq_target[word[i]] > 0) {
+            result = word[i] + result;
+            freq_target[word[i]]--;
+        }
+    }
+
+    (result == target) ? cout << "YES\n" : cout << "NO\n";
+
+}
 
 int main() {
     ios_base::sync_with_stdio(false);
