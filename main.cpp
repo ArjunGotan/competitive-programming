@@ -21,20 +21,7 @@ typedef pair<int, int> pii;
 
 
 void solve() {
-    string s;
-    cin >> s;
-    if (s[0] == s[s.size() - 1]) {
-        cout << s;
-    } else {
-        for (int i = 0; i < s.size(); i++) {
-            if (i != s.size() - 1) {
-                cout << s[i];
-            } else {
-                (s[i] == 'a') ? cout << 'b' : cout << 'a';
-            }
-        }
-    }
-    cout << '\n';
+    
 }
 
 int main() {
