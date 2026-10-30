@@ -21,21 +21,20 @@ typedef pair<int, int> pii;
 
 
 void solve() {
-    int a, b, c;
-    cin >> a >> b >> c;
-
-    int c1, c2, c3;
-    c1 = (2 * b - c) / a > 0 && (2 * b - c) % a == 0;
-    c2 = (2 * b - a) / c > 0 && (2 * b - a) % c == 0;
-    c3 = (a + c) / (2*b) > 0 && (a + c) % (2*b) == 0;
-
-    if (c1 || c2 || c3) {
-        cout << "YES\n";
+    string s;
+    cin >> s;
+    if (s[0] == s[s.size() - 1]) {
+        cout << s;
     } else {
-        cout << "NO\n";
+        for (int i = 0; i < s.size(); i++) {
+            if (i != s.size() - 1) {
+                cout << s[i];
+            } else {
+                (s[i] == 'a') ? cout << 'b' : cout << 'a';
+            }
+        }
     }
-    
-
+    cout << '\n';
 }
 
 int main() {
