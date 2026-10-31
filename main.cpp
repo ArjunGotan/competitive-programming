@@ -20,28 +20,45 @@ typedef pair<int, int> pii;
 
 
 void solve() {
-    int n, temp;
-    int x = 0, y = 0;
+    ll n, x, y, s = 0;
     cin >> n;
-    temp = n;
+    ll arr[n];
 
-    while (temp % 3 == 0) {
-        x++;
-        temp /= 3;
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
     }
-    while (temp % 2 == 0) {
-        y++;
-        temp /= 2;
-    }
+    for (int i = 0; i < n - 1; i++) {
+        x = arr[i];
+        y = arr[i+1];
 
-    if (temp != 1 || x < y) {
-        cout << -1 << '\n';
-        return;
+        if (x < 0) {
+            if (y < 0) {
+                arr[i] = -y;
+                arr[i+1] = -x;
+            } else {
+                if (abs(x) > y) {
+                    arr[i] = -y;
+                    arr[i+1] = -x;
+                }
+            }
+        } else {
+            if (y < 0) {
+                if (abs(y) > x) {
+                    arr[i] = -y;
+                    arr[i+1] = -x;
+                }
+            }
+        }
+        s += arr[i];
+
     }
-    cout << 2 * x - y << '\n';
+    s += arr[n-1];
     
-
+    cout << s << '\n';
+    
+    
 }
+
 
 int main() {
     ios_base::sync_with_stdio(false);
