@@ -7,7 +7,6 @@
 #include <cmath>
 #include <array>
 #include <unordered_map>
-#include <algorithm>
 #include <limits>
 
 using namespace std;
@@ -21,7 +20,27 @@ typedef pair<int, int> pii;
 
 
 void solve() {
+    int n, temp;
+    int x = 0, y = 0;
+    cin >> n;
+    temp = n;
+
+    while (temp % 3 == 0) {
+        x++;
+        temp /= 3;
+    }
+    while (temp % 2 == 0) {
+        y++;
+        temp /= 2;
+    }
+
+    if (temp != 1 || x < y) {
+        cout << -1 << '\n';
+        return;
+    }
+    cout << 2 * x - y << '\n';
     
+
 }
 
 int main() {
