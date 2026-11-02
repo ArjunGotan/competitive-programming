@@ -20,43 +20,6 @@ typedef pair<int, int> pii;
 
 
 void solve() {
-    ll n, x, y, s = 0;
-    cin >> n;
-    ll arr[n];
-
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-    for (int i = 0; i < n - 1; i++) {
-        x = arr[i];
-        y = arr[i+1];
-
-        if (x < 0) {
-            if (y < 0) {
-                arr[i] = -y;
-                arr[i+1] = -x;
-            } else {
-                if (abs(x) > y) {
-                    arr[i] = -y;
-                    arr[i+1] = -x;
-                }
-            }
-        } else {
-            if (y < 0) {
-                if (abs(y) > x) {
-                    arr[i] = -y;
-                    arr[i+1] = -x;
-                }
-            }
-        }
-        s += arr[i];
-
-    }
-    s += arr[n-1];
-    
-    cout << s << '\n';
-    
-    
 }
 
 
