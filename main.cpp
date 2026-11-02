@@ -18,10 +18,9 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 
-
 void solve() {
-}
 
+}
 
 int main() {
     ios_base::sync_with_stdio(false);
@@ -40,4 +39,3 @@ int main() {
 
     return 0;
 }
-    
