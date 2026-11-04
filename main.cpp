@@ -14,28 +14,30 @@ using namespace std;
 #define pb push_back
 #define mp make_pair
 #define all(x) (x).begin(), (x).end()
+
 typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 
-void solve() {
 
+void solve() {
+    
 }
+
 
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    #ifndef ONLINE_JUDGE
+    
+#ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-    #endif
+#endif
 
     int t;
     cin >> t;
     while (t--) {
         solve();
     }
-
     return 0;
 }
